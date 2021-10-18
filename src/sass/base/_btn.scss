@@ -1,0 +1,56 @@
+.light-btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    background: $white;
+    color: $black;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+.btn-primary {
+    text-align: center;
+    justify-content: center;
+
+    background: $primary;
+    color: $white;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    border-radius: 6px;
+    transition: all 0.3s;
+    &:hover {
+        background: #f57a51d2;
+    }
+}
+.btn-modal {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    background: $primary;
+    color: $white;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    border-radius: 6px;
+    transition: all 0.3s;
+    &:hover {
+        background: #f57a51d2;
+    }
+}
+@media (max-width: 640px) {
+    .light-btn {
+        font-size: 12px;
+    }
+}

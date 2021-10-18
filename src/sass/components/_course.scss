@@ -1,0 +1,132 @@
+.course {
+    padding-top: 120px;
+    background: $light-grey;
+    &-sub { 
+        &-title {
+            display: flex;
+            margin-top: 40px;
+            span {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                text-transform: uppercase;
+                width: 9%;
+                margin-right: 16px;
+            }
+            &::after {
+                content: '';
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 10px;
+                left: 0px;
+                top: 7px;
+                background: url('../img/primary-line.png') no-repeat;
+                //background-size: contain;
+            }
+        }
+        &-line {
+            margin-left: 16px;
+            background: $primary;
+            width: 100%;
+            height: 1px;
+        }
+    }
+    &-wrapper {
+        margin-top: 46px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-card {
+        display: flex;
+        width: 100%;
+        &__preview {
+            width: 237px;
+            height: 240px;
+            &-md {
+                display: block;
+            }
+            &-sm {
+                display: none;
+            }
+        }
+        &__descr {
+            margin-left: 16px;
+            width: 50%;
+        }
+    }
+    &-text {
+        margin-top: 16px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1.5;
+        color: $black;
+    }
+    &-link-primary {
+        color: $primary;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 960px) {
+    .course {
+        &-wrapper {
+            margin-top: 46px;
+            flex-wrap: wrap;
+        }
+        &-card {
+            margin-bottom: 64px;
+            &__preview {
+                width: 30%;
+            }
+            &__descr {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .course {
+        padding-top: 104px;
+        &-sub {
+            &-title {
+                span {
+                    font-size: 14px;
+                    width: 35%;
+                    margin-right: 2px;
+                }
+                &::after {
+                    width: 100%;
+                    height: 10px;
+                   // left: 8px;
+                    top: 7px;
+                }
+            }
+        }
+        &-wrapper {
+            margin-top: 24px;
+        }
+        &-card {
+            display: block;
+            &__preview {
+                width: 100%;
+                height: auto;
+                &-md{
+                    display: none;
+                }
+                &-sm {
+                    display: block;
+                }
+            }
+            &__descr {
+                margin-top: 16px;
+                margin-left: 0;
+            }
+        }
+        &-text {
+            margin-top: 4px;
+            font-size: 16px;
+        }
+    }
+}
